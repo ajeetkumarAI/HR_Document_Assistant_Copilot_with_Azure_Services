@@ -2,14 +2,14 @@
 
 # Azure OpenAI settings
 azure_openai:
-  api_version: "2024-06-01"
-  chat_deployment: "gpt-4o"                # your Azure OpenAI chat deployment name
+  api_version: "2024-12-01-preview"
+  chat_deployment: "gpt-4.1"                # your Azure OpenAI chat deployment name
   embedding_deployment: "text-embedding-ada-002"  # your Azure OpenAI embedding deployment name
   temperature: 0
 
 # Azure Blob Storage settings
 azure_blob_storage:
-  container_name: "myblobstorageacc1"          # your blob container name
+  container_name: "myblobcontainer1"          # your blob container name
 
 # Azure AI Search settings
 # azure_search:
@@ -21,7 +21,7 @@ azure_blob_storage:
 
 # Azure AI Search settings
 azure_search:
-  index_name: "rag-1779121997597"
+  index_name: "rag-1779850834431"
   fields:
     id: "chunk_id"
     content: "chunk"
@@ -44,5 +44,5 @@ chunking:
 
 # Retriever settings
 retriever:
-  search_type: similarity
+  search_type: mmr
   k: 6
